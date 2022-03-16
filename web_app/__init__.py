@@ -6,7 +6,11 @@ from web_app.apis.square import Square
 
 app = flask.Flask(__name__, instance_relative_config=True)
 app.config.from_object('config')
-app.config.from_pyfile('config.py')
+
+try:
+	app.config.from_pyfile('config.py')
+except FileNotFoundError:
+	pass
 
 db = SQLAlchemy(app)
 
