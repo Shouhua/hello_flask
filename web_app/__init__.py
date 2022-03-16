@@ -1,8 +1,8 @@
 import flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
-from webapp.apis.hello import Hello
-from webapp.apis.square import Square
+from web_app.apis.hello import Hello
+from web_app.apis.square import Square
 
 app = flask.Flask(__name__, instance_relative_config=True)
 app.config.from_object('config')
