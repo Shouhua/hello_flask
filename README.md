@@ -50,7 +50,12 @@ rm -rf .venv
 - instance/config.py 生产环境配置文件(https://spacewander.github.io/explore-flask-zh/5-configuration.html)
 
 ## ORM
+Flask-SQLAlchemy
 
 ## 日志
+flask builtin logger
 
-## 安全
+## 部署
+**注意**: 每次生成镜像时，需要确认是否时最新的requirements.txt, 不然部署会产生错误  
+目前使用docker镜像部署，将来可能有多个镜像，比如数据库mysql，缓存redis，前端web等，可以统一使用docker compose部署。本工程生成镜像可以使用脚本docker_script，windows使用docker_script.ps1，*nix可以使用docker_script.sh，如果docker registry有变化，可能需要更新脚本内容。
+
