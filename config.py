@@ -1,3 +1,5 @@
+FLASK_ENV = "development"
+DEBUG = True
 # 设置连接数据库的URL
 SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:root@10.122.48.111:3306/company"
 # 设置每次请求结束后会自动提交数据库的改动

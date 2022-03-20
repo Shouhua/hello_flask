@@ -12,6 +12,9 @@ def create_app(config):
 	except FileNotFoundError:
 		pass
 
+	from flask_cors import CORS
+	CORS(app, supports_credentials=True)
+
 	from flask_restful import Api
 	api = Api(app, prefix="/api/v0.1")
 

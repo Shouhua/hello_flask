@@ -15,3 +15,9 @@ class UserListApi(Resource):
 		response = make_response(jsonify(user.serialize()), 201) 
 		response.headers["Content-Type"] = "application/json"
 		return response
+	def get(self):
+		users = User.query.all()
+		jsonData = [user.serialize() for user in users]
+		response = make_response(jsonify(code=201, data=jsonData), 201) 
+		response.headers["Content-Type"] = "application/json"
+		return response
