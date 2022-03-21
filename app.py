@@ -1,4 +1,3 @@
-from venv import create
 from web_app import create_app, db
 # from app import views
 
